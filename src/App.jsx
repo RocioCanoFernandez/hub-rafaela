@@ -96,17 +96,17 @@ const App = () => {
   );
 
   return (
-    <div className="min-h-screen font-sans bg-[#fcfcfc] text-[#222] flex flex-col selection:bg-[#222] selection:text-white relative overflow-hidden">
+    <div className="min-h-screen font-sans bg-[#f9f8f6] text-[#222] flex flex-col selection:bg-[#222] selection:text-white relative overflow-hidden">
       
       {/* BACKGROUND IMAGE - Full screen on mobile, Right side on desktop */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/rafaela-fondo.png" 
           alt="" 
-          className="w-full h-full object-cover opacity-[0.15] lg:opacity-60 lg:w-1/2 lg:translate-x-full"
+          className="w-full h-full object-cover opacity-45 lg:opacity-100 lg:w-1/2 lg:translate-x-full lg:object-right-top"
         />
-        {/* Subtle white fade for desktop only to blend background */}
-        <div className="hidden lg:block absolute inset-y-0 left-1/2 w-32 bg-gradient-to-r from-[#fcfcfc] to-transparent"></div>
+        {/* Subtle transition for desktop to blend the fabric texture */}
+        <div className="hidden lg:block absolute inset-y-0 left-1/2 w-64 bg-gradient-to-r from-[#f9f8f6] via-[#f9f8f6]/80 to-transparent"></div>
       </div>
 
       <div className="relative z-10 w-full flex flex-col min-h-screen">
