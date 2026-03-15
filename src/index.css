@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  background-color: #fcfcfc;
+  color: #222;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.minimal-button {
+  @apply relative overflow-hidden transition-all duration-500 border border-black/10 hover:border-black/30;
+}
+
+.minimal-button::after {
+  content: '';
+  @apply absolute inset-0 bg-black/5 -translate-x-full transition-transform duration-500 ease-out;
+}
+
+.minimal-button:hover::after {
+  @apply translate-x-0;
+}
