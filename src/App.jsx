@@ -23,8 +23,8 @@ const App = () => {
     },
     {
       title: "Enviar Email",
-      subtitle: "elafotorafaela@gmail.com",
-      url: "mailto:elafotorafaela@gmail.com",
+      subtitle: "elairis8@gmail.com",
+      url: "mailto:elairis8@gmail.com",
       icon: <Mail className="w-5 h-5" />,
     },
     {
@@ -124,7 +124,7 @@ const App = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-5xl lg:text-7xl font-extralight tracking-[0.2em] uppercase leading-tight font-serif mb-2">
+              <h1 className="text-4xl lg:text-5xl font-extralight tracking-[0.2em] uppercase leading-tight font-serif mb-2">
                 Rafaela <br className="hidden lg:block"/> Rodriguez
               </h1>
               <p className="text-sm tracking-[0.4em] uppercase opacity-40 font-medium">Photography & Video</p>
