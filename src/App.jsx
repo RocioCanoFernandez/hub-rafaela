@@ -9,7 +9,8 @@ import {
   Mail, 
   Phone,
   ArrowRight,
-  User
+  User,
+  Download
 } from 'lucide-react';
 
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
     {
       title: "YouTube",
       subtitle: "Contenido Audiovisual",
-      url: "https://www.youtube.com/@rafaelarodriguez8532",
+      url: "https://www.youtube.com/watch?v=9SKQiJMWlrk&t=10s",
       icon: <Youtube className="w-5 h-5" />
     }
   ];
@@ -51,7 +52,7 @@ const App = () => {
     {
       title: "Vimeo",
       subtitle: "Proyectos y Bobinas",
-      url: "https://vimeo.com/11320503",
+      url: "http://www.vimeo.com/22381536",
       icon: <Video className="w-5 h-5" />
     },
     {
@@ -94,6 +95,19 @@ const App = () => {
       <ArrowRight className={`w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 ${link.primary ? 'text-white' : 'text-black/30'}`} />
     </a>
   );
+
+  const handleSaveContact = () => {
+    const vcard = `BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Rafaela Rodriguez\r\nORG:Rafaela Rodriguez\r\nTITLE:Photography & Video\r\nTEL;TYPE=CELL:+34620191289\r\nEMAIL:elairis8@gmail.com\r\nURL:https://hub-hub-rafaela.npfusf.easypanel.host/\r\nEND:VCARD`;
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Rafaela_Rodriguez.vcf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="min-h-screen font-sans bg-[#f9f8f6] text-[#222] flex flex-col selection:bg-[#222] selection:text-white relative overflow-hidden">
@@ -154,6 +168,15 @@ const App = () => {
           <p className="text-[10px] opacity-20 uppercase tracking-[0.3em] font-medium hidden sm:block">© 2024 Rafaela Rodriguez</p>
         </div>
       </div>
+
+      <button
+        onClick={handleSaveContact}
+        className="fixed top-6 right-6 w-14 h-14 bg-white/90 backdrop-blur-md text-slate-700 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 z-50 group border border-white/50 cursor-pointer"
+        title="Descargar Contacto"
+        aria-label="Descargar Contacto"
+      >
+        <Download className="w-6 h-6 group-hover:text-slate-900 transition-colors drop-shadow-sm" />
+      </button>
 
       {/* Floating WhatsApp Button */}
       <a
