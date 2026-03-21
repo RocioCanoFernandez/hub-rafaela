@@ -165,7 +165,16 @@ const App = () => {
             <span className="text-xs font-bold tracking-[0.2em] uppercase">620 191 289</span>
           </a>
           <div className="flex-grow"></div>
-          <p className="text-[10px] opacity-20 uppercase tracking-[0.3em] font-medium hidden sm:block">© 2024 Rafaela Rodriguez</p>
+          <div className="flex items-center gap-2 hidden sm:flex opacity-40 hover:opacity-100 transition-opacity">
+            <p className="text-[10px] uppercase tracking-[0.2em] font-bold">
+              © 2026 Rafaela Rodriguez
+            </p>
+            <div className="w-px h-3 bg-black/20 mx-1"></div>
+            <p className="text-[10px] uppercase tracking-[0.2em] font-bold flex items-center gap-1.5">
+              SeviAI Ecosystem
+              <img src="/logo_sin_fondo.png" alt="SeviAI" className="h-3 w-auto opacity-60 grayscale" />
+            </p>
+          </div>
         </div>
       </div>
 
