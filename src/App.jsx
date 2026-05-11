@@ -97,7 +97,7 @@ const App = () => {
   );
 
   const handleSaveContact = () => {
-    const vcard = `BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Rafaela Rodriguez\r\nORG:Rafaela Rodriguez\r\nTITLE:Photography & Video\r\nTEL;TYPE=CELL:+34620191289\r\nEMAIL:elairis8@gmail.com\r\nURL:https://hub-hub-rafaela.npfusf.easypanel.host/\r\nEND:VCARD`;
+    const vcard = `BEGIN:VCARD\r\nVERSION:3.0\r\nN:Rodriguez;Rafaela;;;\r\nFN:Rafaela Rodriguez\r\nORG:Rafaela Rodriguez\r\nTITLE:Photography & Video\r\nTEL;TYPE=CELL:+34620191289\r\nEMAIL:elairis8@gmail.com\r\nURL:https://hub-hub-rafaela.npfusf.easypanel.host/\r\nEND:VCARD`;
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
